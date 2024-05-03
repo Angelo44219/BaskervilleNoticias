@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Libre Baskerville';
+}
+
+/*--Header--*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header .nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.header .nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .nav-links a:hover {
+    color: #ddd;
+}
+
+.header .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header .buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #BD9B5B;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header .buttons button:hover {
+    background-color: #BD9B5B;
+}
+
+/*-------------------------------------*/
+
+@media (min-width: 768px) {
+    .header .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+}
+
+/*---Sidenav----*/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+/* Estilos para los enlaces del menú */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 19px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-weight: 300;
+}
+
+/* Cambia el color de los enlaces al pasar el mouse sobre ellos */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Estilos para el botón de cierre (esquina superior derecha) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Estilos para el contenido de la página (si deseas que el menú lateral empuje el contenido hacia la derecha) */
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    flex: 1 0 auto;
+}
+
+/* Estilos para pantallas más pequeñas (altura inferior a 450px) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+/*-------------------------------------*/
+
+.lista_reset {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: #0C0B0D;
+    color: #F2E6D0;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.boton {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 16px 38px;
+    background: #BD9B5B;
+    color: #F2E6D0;
+}
+
+.boton_login {
+    margin-right: 8px;
+}
+
+.boton_registro {
+    background: #0C0B0D;
+    color: #BD9B5B;
+    border: #BD9B5B 1.5px solid;
+}
+
+.nav_item:not(:last-of-type) {
+    margin-right: 40px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px;
+    display: flex;
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+/*-------------------------------------*/
+
+/*--Contenido de la pagina--*/
+
+.contenido {
+    flex: 1 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+/*-------------------------------------*/
+
+/*--Footer--*/
+
+.footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #818181;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #0C0B0D;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #BD9B5B;
+}
+
+.footer .social,
+.footer .sections {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/*--Cards--*/
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease;
+}
+
+.card:hover .overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/*-------------------------------------*/
+
+/*--Formularios--*/
+    .error { color: red; }
+/*-------------------------------------*/
