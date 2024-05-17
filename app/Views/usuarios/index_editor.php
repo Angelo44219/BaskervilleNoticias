@@ -10,16 +10,24 @@
     <link rel="preconnect" href="<?php echo 'https://fonts.googleapis.com'; ?>" crossorigin="anonymous">
     <link rel="preconnect" href="<?php echo 'https://fonts.gstatic.com'; ?>" crossorigin="anonymous">
     <link href="<?php echo 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap'; ?>" rel="stylesheet">
-    <title><?php $this->renderSection('titulo'); ?>&nbsp;|&nbsp;Baskerville noticias</title>
+    <title><?php echo '@ ' . session()->get('nombre_usuario') ?>&nbsp;|&nbsp;Baskerville noticias</title>
 </head>
 
 <body>
 
-    <?php echo $this->include('Layouts/header_general');?>
-    <?php echo $this->renderSection('contenido_sitio');?>
-    <?php echo $this->include('Layouts/footer');?>
-    <?php echo $this->renderSection('js');?>
+    <?php echo $this->include('Layouts/header_general'); ?>
+
+    <div class="container" style="margin-top:50px;">
+
+
+        <?php echo $this->renderSection('contenido'); ?>
+
+    </div>
+    <?php echo $this->include('Layouts/footer'); ?>
+    <?php echo $this->renderSection('js'); ?>
 
 </body>
 
 </html>
+
+<!--

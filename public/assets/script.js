@@ -1,3 +1,4 @@
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
@@ -58,4 +59,18 @@ cardsData.forEach((data, i) => {
         card.style.opacity = '1';
         card.style.transform = 'translateY(0)';
     }, i * 200);  // 200ms de retraso entre cada tarjeta
+});
+
+//tabs
+let select = document.getElementById('estado');
+let inputOculto = document.getElementById('motivo');
+
+// Escucha los cambios en el select
+select.addEventListener('change', function() {
+    // Asigna el valor del select al input oculto
+    inputOculto.value = this.value;
+
+
+    // Muestra el input oculto
+    inputOculto.style.display = 'block';
 });

@@ -19,4 +19,17 @@ class CategoriasModel extends Model
     // Dates
     protected $useTimestamps = false;
 
+    public function obtener_nombre_categoria($id_categoria)
+    {
+        $resultado = $this->db->table($this->table)
+            ->select('nombre')
+            ->where('id', $id_categoria)
+            ->get();
+
+        if ($resultado->getNumRows() > 0) {
+            return $resultado->getRow('nombre');
+        } else {
+            return false;
+        }
+    }
 }

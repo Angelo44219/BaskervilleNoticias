@@ -12,15 +12,17 @@ class NoticiasModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['editor_id','titulo','descripcion','fecha','noticia_activa','estado','categoria_id','imagen'];
+    protected $allowedFields    = ['editor_id','titulo','descripcion','fecha','noticia_activa','estado','categoria_id','imagen','fecha_publicacion','fecha_expiracion','motivo'];
 
     protected bool $allowEmptyInserts = false;
 
     // Dates
-    protected $useTimestamps = true;
+    protected $useTimestamps = false;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
 
-   
+
 }
+
+

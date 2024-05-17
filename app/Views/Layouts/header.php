@@ -1,4 +1,4 @@
-<header class="p-3 text-bg-dark sticky">
+<header class="navbar mb-3 text-bg-dark sticky-top">
     <div class="container">
 
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -6,7 +6,7 @@
                 <i class="bi bi-list"></i>
             </label>&nbsp;&nbsp;
 
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <a href="<?php echo base_url();?>" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                 <h3><i class="bi bi-newspaper"></i>Baskerville noticias</h3>
             </a>
 
@@ -18,8 +18,8 @@
             </ul>
 
             <div class="text-end">
-                <a class="btn btn-outline-light me-2" href="<?php echo base_url('Layouts/usuarios/iniciar_sesion'); ?>">Iniciar sesión</button>
-                <a class="btn btn-warning" href="<?php echo base_url('Layouts/usuarios/registro'); ?>">Registrarse</a>
+                <a class="btn btn-outline-light me-2" href="<?php echo base_url(); ?>iniciar_sesion">Iniciar sesión</button>
+                <a class="btn btn-warning" href="<?php echo base_url(); ?>registro">Registrarse</a>
             </div>
         </div>
     </div>
