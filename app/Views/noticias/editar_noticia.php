@@ -1,7 +1,7 @@
 <?php echo $this->extend('usuarios/index_editor'); ?>
 <?php echo $this->section('contenido'); ?>
 
-<div class="contenido">
+<div class="contenido mb-4">
     <div class="card rounded-0" style="max-width: 700px;">
         <div class="card-header bg-dark text-white">
             Editar Noticia

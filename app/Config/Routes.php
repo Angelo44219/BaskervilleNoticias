@@ -23,6 +23,7 @@ $routes->post('iniciar_sesion/autenticar', 'Usuarios::autenticar');
 $routes->resource('noticias');
 $routes->get('nueva_noticia','Noticias::new',['filter'=>'usuario_autenticar']);
 $routes->get('editar_noticia/edit/(:any)', 'Noticias::edit/$1',['filter'=>'usuario_autenticar']);
+$routes->get('seguimiento/ver_seguimiento/(:any)', 'Noticias::ver_seguimiento/$1',['filter'=>'usuario_autenticar']);
 $routes->get('publicadas' ,'Noticias::mostrar_publicadas',['filter'=>'usuario_autenticar']);
 $routes->get('borradores' ,'Noticias::mostrar_borradores',['filter'=>'usuario_autenticar']);
 $routes->get('en_correccion' ,'Noticias::mostrar_en_correccion',['filter'=>'usuario_autenticar']);

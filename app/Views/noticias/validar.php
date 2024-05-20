@@ -43,10 +43,10 @@
                         <td><?= $noticia->fecha_publicacion ?></td>
                         <td><?= $noticia->fecha_expiracion ?></td>
                         <br>
-                        <td><a class="btn btn-dark small-font" href="<?php echo base_url('rechazar/rechazar_noticia/'.$noticia->id)?>">Validar noticia</a></td>
-                        <td><a class="btn btn-dark small-font" href="<?php echo base_url('publicar/publicar_noticia/'.$noticia->id)?>">Publicar noticia</a></td>
-                        <td><a class="btn btn-dark small-font" href="<?php echo base_url('corregir/corregir_noticia/'.$noticia->id)?>">A corregir</a></td>
-                        <td><a class="btn btn-warning small-font" href="<?php echo base_url('noticias/'.$noticia->id)?>">Seguimiento</a></td>
+                        <td><a class="btn btn-danger small-font" href="<?php echo base_url('rechazar/rechazar_noticia/'.$noticia->id)?>">Rechazar</a></td>
+                        <td><a class="btn btn-primary small-font" href="<?php echo base_url('publicar/publicar_noticia/'.$noticia->id)?>">Publicar</a></td>
+                        <td><a class="btn btn-success small-font" href="<?php echo base_url('corregir/corregir_noticia/'.$noticia->id)?>">Corregir</a></td>
+                        <td><a href="<?= base_url('seguimiento/ver_seguimiento/' . $noticia->id); ?>" class="btn btn-warning small-font">Seguimiento</a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

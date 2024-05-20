@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="<?php echo 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css'; ?>">
     <link rel="preconnect" href="<?php echo 'https://fonts.googleapis.com'; ?>" crossorigin="anonymous">
     <link rel="preconnect" href="<?php echo 'https://fonts.gstatic.com'; ?>" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://fontmeme.com/permalink/240520/c74442871c4e18e07829bcb55901c7f7.png">
     <link href="<?php echo 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap'; ?>" rel="stylesheet">
-    <title><?php echo '@ ' . session()->get('nombre_usuario') ?>&nbsp;|&nbsp;Baskerville noticias</title>
+    <title>
+        <?php echo '@ ' . session()->get('nombre_usuario') ?>&nbsp;|&nbsp;Baskerville noticias
+    </title>
 </head>
 
 <body>

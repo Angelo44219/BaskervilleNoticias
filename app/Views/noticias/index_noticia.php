@@ -3,16 +3,17 @@
 Inicio
 <?php echo $this->endSection(); ?>
 <?php echo $this->section('contenido_sitio'); ?>
-<div class="container-fluid mt-3">
+<div class="container mt-3">
 
     <div id="ultimas_noticias" style="padding:10px;margin-top:20px;height:1200px;">
         <h1 class="mb-3">Ultimas Noticias</h1>
-
-        <div class="row">
+        <br><hr>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <br>
             <?php foreach ($noticias as $noticia) : ?>
 
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="card h-100">
+                <div class="col">
+                    <div class="card">
                         <a href="<?php echo base_url('noticias/' . $noticia['id']); ?>">
                             <img class="card-img-top" src="<?php echo base_url('uploads/' . $noticia['imagen']) ?>" alt="<?= $noticia['titulo'] ?>">
                         </a>

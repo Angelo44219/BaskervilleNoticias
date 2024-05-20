@@ -26,9 +26,6 @@ class Noticias extends BaseController
         if ($db->tableExists('noticias')) {
             $builder = $db->table('noticias');
 
-            // Verifica que las columnas existen
-            $fields = $db->getFieldNames('noticias');
-
             $builder->select('*');
             $builder->where('estado', 'publicada');
             $builder->where('noticia_activa', 1);
@@ -255,6 +252,25 @@ class Noticias extends BaseController
         }
     }
 
+    public function ver_seguimiento($id_noticia)
+    {
+        // Obtiene el ID del usuario actual
+        $session = session();
+        $id_usuario = $session->get('id');
+
+        $db = \Config\Database::connect();
+
+        // Construye la consulta SQL
+        $builder = $db->table('seguimiento');
+        $builder->where('id_usuario', $id_usuario);
+        $builder->where('id_noticia', $id_noticia);
+
+        // Ejecuta la consulta y obtiene los resultados
+        $query = $builder->get();
+        $result = $query->getResult();
+        // Retorna los resultados
+        return view('noticias/ver_seguimiento', ['seguimientos' => $result]);
+    }
 
     public function mostrar_rechazadas()
     {
@@ -274,7 +290,7 @@ class Noticias extends BaseController
             $builder = $db->table('noticias');
             $builder->where('editor_id', $usuarioId);
             $builder->where('estado', 'rechazada');
-            $builder->where('noticia_activa', 0);
+            $builder->where('noticia_activa', 1);
 
             // Ejecuta la consulta y obtiene los resultados
             $query = $builder->get();

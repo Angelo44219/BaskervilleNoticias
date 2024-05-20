@@ -3,10 +3,9 @@
 
 
 <div class="container">
-    <br><br>
-    <h3 class="mb-4 mt-2">Noticias Rechazadas</h3>
-
-    <div class="contenido" style="margin-top: 20px;">
+    <h2 class="mb-4 mt-2">Noticias Rechazadas</h2>
+    <hr>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php foreach ($noticias as $noticia) : ?>
             <div class="col-sm-4">
                 <div class="card">
@@ -17,13 +16,12 @@
                         <p class="card-text-muted nav-link disabled"><?= $noticia->nombre_categoria; ?></p>
                         <p class="text-muted"><?= $noticia->estado; ?></p>
                         <p class="text-muted nav-link disabled"><?= $noticia->fecha; ?></p>
-                        <p class="text-muted"><?= $noticia->motivo; ?></p>
+                        <p class="text-danger"><?= $noticia->motivo; ?></p>
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
-
 
 </div>
 

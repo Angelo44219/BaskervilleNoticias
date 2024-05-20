@@ -12,9 +12,6 @@
 
             <form method="post" action="<?php echo base_url('noticias/corregir/' . $noticia['id']); ?>" autocomplete="off" enctype="multipart/form-data">
 
-                <input type="hidden" name="_method" value="put">
-                <input type="hidden" name="noticia_id" value="<?= $noticia['id']; ?>">
-
                 <fieldset disabled>
                     <div class="mb-3 mt-3">
                         <label for="titulo" class="form-label" name="titulo">Título</label>
@@ -43,7 +40,7 @@
                 </select>
 
                 <br><br>
-                <button type="submit" class="btn btn-warning">Rechazar noticia</button>
+                <button type="submit" class="btn btn-warning">Mandar a corregir</button>
                 <a href="<?php echo base_url('validar'); ?>" class="btn btn-secondary">Regresar</a>
 
             </form>

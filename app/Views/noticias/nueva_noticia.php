@@ -5,7 +5,7 @@
 
 <div class="contenido">
     <div class="card rounded-0" style="max-width: 700px;">
-        <div class="card-header">
+        <div class="card-header bg-dark text-white">
             Crear Noticia
         </div>
 
